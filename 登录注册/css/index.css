@@ -80,3 +80,33 @@
 #warpper #header .headBottomMain .search input::-webkit-input-placeholder {
   color: yellowgreen;
 }
+#warpper #navWarp {
+  border-bottom: 2px solid #e1251b;
+}
+#warpper #navWarp .navWapMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#warpper #navWarp .navWapMain::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #navWarp .navWapMain a {
+  margin: 0 22px;
+  font-size: 16px;
+  color: #333;
+  float: left;
+  line-height: 50px;
+}
+#warpper #navWarp .navWapMain a:first-child {
+  float: left;
+  width: 210px;
+  height: 50px;
+  background-color: #e1251b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
