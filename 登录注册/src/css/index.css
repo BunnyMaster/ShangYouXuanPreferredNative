@@ -67,7 +67,7 @@
   width: 490px;
   height: 32px;
   padding: 0 4px;
-  border: 2tpx solid #ea4a36;
+  border: 2px solid #ea4a36;
   float: left;
 }
 #warpper #header .headBottomMain .search input:last-child {
@@ -109,4 +109,19 @@
   font-weight: bold;
   text-align: center;
   line-height: 50px;
+}
+#warpper #content .contMain {
+  width: 1200px;
+  margin: 15px auto 0 auto;
+  font-size: 0;
+}
+#warpper #content .contMain #navPath {
+  padding: 9px 15px 9px 0;
+}
+#warpper #content .contMain #navPath a {
+  font-size: 12px;
+}
+#warpper #content .contMain #navPath i {
+  font-size: 12px;
+  padding: 0 5px;
 }
