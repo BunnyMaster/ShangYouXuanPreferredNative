@@ -1,0 +1,112 @@
+@import url(./mixins/clear.less);
+
+// 最外层元素
+#warpper {
+
+    // 头部
+    #header {
+
+        // 上面部分
+        .headerTop {
+            background: #eaeaea;
+            height: 30px;
+
+            .headTopMain {
+                width: 1200px;
+                margin: 0 auto;
+                line-height: 30px;
+                .clearfix();
+
+                // 左侧
+                .left {
+                    h5 {
+                        float: left;
+                        margin-right: 5px;
+                    }
+
+                    p {
+                        float: left;
+
+                        a {
+                            &:first-child {
+                                border-right: 1px solid #b3aeae;
+                                padding-right: 5px;
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                }
+
+                // 右侧
+                .right {
+                    float: right;
+
+                    nav {
+                        font-size: 0;
+
+                        a {
+                            margin-right: 10px;
+                            padding-right: 10px;
+                            border-right: 1px solid #b3aeae;
+                            font-size: 12px;
+
+                            &:last-child {
+                                margin-right: 0;
+                                padding-right: 0;
+                                border-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 下面部分
+        .headBottomMain {
+            width: 1200px;
+            margin: 0 auto;
+            .clearfix();
+
+            // logo
+            .logo {
+                float: left;
+                a {
+                    img {
+                        width: 175px;
+                        height: 56px;
+                        margin: 25px 45px;
+                    }
+                }
+            }
+
+            // 搜索框
+            .search {
+                float: right;
+                margin-top: 35px;
+
+                input {
+                    &:first-child {
+                        box-sizing: border-box;
+                        width: 490px;
+                        height: 32px;
+                        padding: 0 4px;
+                        border: 2tpx solid #ea4a36;
+                        float: left;
+                    }
+                    // 提交按钮
+                    &:last-child{
+                        width: 68px;
+                        height: 32px;
+                        color: #fff;
+                        background-color: #ea4a36;
+                        border: none;
+                    }
+                    // 修饰placeholder
+                    &::-webkit-input-placeholder{
+                        color: yellowgreen;
+                    }
+                }
+            }
+        }
+    }
+}

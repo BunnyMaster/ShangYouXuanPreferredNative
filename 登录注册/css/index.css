@@ -1,0 +1,82 @@
+#warpper #header .headerTop {
+  background: #eaeaea;
+  height: 30px;
+}
+#warpper #header .headerTop .headTopMain {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+#warpper #header .headerTop .headTopMain::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #header .headerTop .headTopMain .left h5 {
+  float: left;
+  margin-right: 5px;
+}
+#warpper #header .headerTop .headTopMain .left p {
+  float: left;
+}
+#warpper #header .headerTop .headTopMain .left p a:first-child {
+  border-right: 1px solid #b3aeae;
+  padding-right: 5px;
+  margin-right: 3px;
+}
+#warpper #header .headerTop .headTopMain .right {
+  float: right;
+}
+#warpper #header .headerTop .headTopMain .right nav {
+  font-size: 0;
+}
+#warpper #header .headerTop .headTopMain .right nav a {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #b3aeae;
+  font-size: 12px;
+}
+#warpper #header .headerTop .headTopMain .right nav a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+#warpper #header .headBottomMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#warpper #header .headBottomMain::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #header .headBottomMain .logo {
+  float: left;
+}
+#warpper #header .headBottomMain .logo a img {
+  width: 175px;
+  height: 56px;
+  margin: 25px 45px;
+}
+#warpper #header .headBottomMain .search {
+  float: right;
+  margin-top: 35px;
+}
+#warpper #header .headBottomMain .search input:first-child {
+  box-sizing: border-box;
+  width: 490px;
+  height: 32px;
+  padding: 0 4px;
+  border: 2tpx solid #ea4a36;
+  float: left;
+}
+#warpper #header .headBottomMain .search input:last-child {
+  width: 68px;
+  height: 32px;
+  color: #fff;
+  background-color: #ea4a36;
+  border: none;
+}
+#warpper #header .headBottomMain .search input::-webkit-input-placeholder {
+  color: yellowgreen;
+}
