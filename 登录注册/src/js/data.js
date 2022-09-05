@@ -1,33 +1,72 @@
 var goodData = {
-    path: [
+    path: [{
+        title: "手机、数码、通讯",
+        url: "###"
+    }, {
+        title: "手机",
+        url: "###"
+    }, {
+        title: "Apple苹果",
+        url: "###"
+    }, {
+        title: "iphone 6S系",
+    }],
+    imagessrc: [{
+            b: "./images/b1.png",
+            s: "./images/s1.png"
+        },
         {
-            title: "手机、数码、通讯",
-            url: "###"
-        }, {
-            title: "手机",
-            url: "###"
-        }, {
-            title: "Apple苹果",
-            url: "###"
-        }, {
-            title: "iphone 6S系",
+            b: "./images/b2.png",
+            s: "./images/s2.png"
+        },
+        {
+            b: "./images/b3.png",
+            s: "./images/s3.png"
+        },
+        {
+            b: "./images/b1.png",
+            s: "./images/s1.png"
+        },
+        {
+            b: "./images/b2.png",
+            s: "./images/s2.png"
+        },
+        {
+            b: "./images/b3.png",
+            s: "./images/s3.png"
+        },
+        {
+            b: "./images/b1.png",
+            s: "./images/s1.png"
+        },
+        {
+            b: "./images/b2.png",
+            s: "./images/s2.png"
+        },
+        {
+            b: "./images/b3.png",
+            s: "./images/s3.png"
+        },
+        {
+            b: "./images/b1.png",
+            s: "./images/s1.png"
+        },
+        {
+            b: "./images/b2.png",
+            s: "./images/s2.png"
+        },
+        {
+            b: "./images/b3.png",
+            s: "./images/s3.png"
+        },
+        {
+            b: "./images/b1.png",
+            s: "./images/s1.png"
+        },
+        {
+            b: "./images/b2.png",
+            s: "./images/s2.png"
         }
-    ],
-    imagessrc: [
-        { b: "./images/b1.png", s: "./images/s1.png" },
-        { b: "./images/b2.png", s: "./images/s2.png" },
-        { b: "./images/b3.png", s: "./images/s3.png" },
-        { b: "./images/b1.png", s: "./images/s1.png" },
-        { b: "./images/b2.png", s: "./images/s2.png" },
-        { b: "./images/b3.png", s: "./images/s3.png" },
-        { b: "./images/b1.png", s: "./images/s1.png" },
-        { b: "./images/b2.png", s: "./images/s2.png" },
-        { b: "./images/b3.png", s: "./images/s3.png" },
-        { b: "./images/b1.png", s: "./images/s1.png" },
-        { b: "./images/b2.png", s: "./images/s2.png" },
-        { b: "./images/b3.png", s: "./images/s3.png" },
-        { b: "./images/b1.png", s: "./images/s1.png" },
-        { b: "./images/b2.png", s: "./images/s2.png" }
     ],
     goodsDetail: {
         title: "Apple iPhone 6s（A1700）64G玫瑰金色 移动通信电信4G手机bbb123",
@@ -40,11 +79,9 @@ var goodData = {
         support: "以旧换新，闲置手机回收 4G套餐超值抢 礼品购",
         address: "广东省 深圳市 宝安区",
         evaluateNum: 670000,
-        crumbData: [
-            {
+        crumbData: [{
                 "title": "选择颜色",
-                "data": [
-                    {
+                "data": [{
                         type: "金色",
                         changePrice: 0
                     },
@@ -60,8 +97,7 @@ var goodData = {
             },
             {
                 "title": "内存容量",
-                "data": [
-                    {
+                "data": [{
                         type: "16G",
                         changePrice: 0
                     },
@@ -81,8 +117,7 @@ var goodData = {
             },
             {
                 "title": "选择版本",
-                "data": [
-                    {
+                "data": [{
                         type: "公开版",
                         changePrice: 0
                     },
@@ -94,8 +129,7 @@ var goodData = {
             },
             {
                 "title": "购买方式",
-                "data": [
-                    {
+                "data": [{
                         type: "官方标配",
                         changePrice: 0
                     },
@@ -112,5 +146,3 @@ var goodData = {
         ]
     }
 }
-
-export default goodData

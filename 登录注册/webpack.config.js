@@ -10,7 +10,7 @@ module.exports = {
   entry: "./src/main.js",
   // TODO 输出
   output: {
-    filename: './[name].bundle.js',
+    filename: './js/[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     //重新打包时候会自动清除
     clean: true,
@@ -50,24 +50,24 @@ module.exports = {
         },
         generator: {
           //输出图片名称
-          filename: "./images/[hash][query].[ext]",
+          filename: "./images/[hash][ext]",
         },
       },
-      {
-        test: /\.(png|jpe?g|gif|webp|svg)$/,
-        loader: "url-loader",
-        type: 'javascript/auto',
+      // {
+      //   test: /\.(png|jpe?g|gif|webp|svg)$/,
+      //   loader: "url-loader",
+      //   type: 'javascript/auto',
 
-        // 设置配置选项
-        options: {
-          // 如果小于8kb使用base64 处理
-          // 优点 减少对服务器的请求，减轻服务器端压力
-          // 缺点 体积会变大
-          limit: 8 * 1024,
-          name: "./images/[hash:10].[ext]", // 取hash值的前10位，ext保留原来的后缀名
-          esModule: false, //关闭es6模块化
-        }
-      },
+      //   // 设置配置选项
+      //   options: {
+      //     // 如果小于8kb使用base64 处理
+      //     // 优点 减少对服务器的请求，减轻服务器端压力
+      //     // 缺点 体积会变大
+      //     limit: 8 * 1024,
+      //     name: "./images/[hash:10].[ext]", // 取hash值的前10位，ext保留原来的后缀名
+      //     esModule: false, //关闭es6模块化
+      //   }
+      // },
       // 处理html资源
       {
         test: /\.(html)$/,
@@ -114,7 +114,8 @@ module.exports = {
   // TODO 插件
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html")
+      template: path.resolve(__dirname, "./src/index.html"),
+      filename: 'index.html' //自动生成的HTML文件的名称
     }),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
@@ -135,6 +136,7 @@ module.exports = {
     port: "3000",
     open: true,
   },
+
   // TODO 模式
   // mode: "development",
   mode: "production",
