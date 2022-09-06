@@ -1,14 +1,3 @@
-window.addEventListener("load", () => {
-    var Home = new HomeFun();
-    Home.AppenNodes();
-    Home.MangifyingGlass();
-    Home.ThumbnaiData();
-    Home.ClickThumbnaiChange();
-    Home.PrevAndNext();
-    Home.RightTopData();
-    Home.clickBind();
-})
-var goodData = goodData;
 class HomeFun {
     PrevAndNextprev;
     PrevAndNextnext;
@@ -17,6 +6,7 @@ class HomeFun {
     goodDataDetail;
     rightTop;
     chooseWarp;
+    listWarpMiddle;
     constructor() {
         this.PrevAndNextprev = document.querySelector(".prev")
         this.PrevAndNextnext = document.querySelector(".next")
@@ -24,6 +14,7 @@ class HomeFun {
         this.goodDataDetail = goodData.goodsDetail
         this.rightTop = document.querySelector(".rightTop")
         this.chooseWarp = document.querySelector(".chooseWarp")
+        this.listWarpMiddle = document.querySelector(".middle")
     }
     // 添加子元素
     AppenNodes() {
@@ -243,4 +234,89 @@ class HomeFun {
         });
 
     }
+    // 选择搭配中间区域复选框中套餐效果
+    ChoosePrice() {
+        var listWarpMiddle = this.listWarpMiddle.querySelectorAll("li input")
+        var RightIPrice = document.querySelector(".listWarp .right i");
+        var listWarp = document.querySelectorAll("#content > div > div.goodDetailWarp > div > div > div > ul > li > div > span");
+        var Sapnlist = new Array(listWarp.length);
+        var sum = 0;
+        var startsum = parseInt(RightIPrice.innerText.split("￥")[1]);
+
+        listWarp.forEach(span => Sapnlist.fill(span.innerHTML));
+        listWarpMiddle.forEach((LiCheck, LiIndex) => {
+            LiCheck.addEventListener("click", () => {
+                if (LiCheck.checked) {
+                    sum += parseInt(Sapnlist[LiIndex])
+                }
+                if (!LiCheck.checked) {
+                    sum -= parseInt(Sapnlist[LiIndex])
+                }
+                RightIPrice.innerHTML = startsum + sum
+            })
+        });
+    }
+    // 公共选项卡函数
+    Tab(tabBtns, TabCounts) {
+        tabBtns.forEach((btns, btnsIndex) => {
+            btns.index = btnsIndex;
+            btns.addEventListener("click", () => {
+                tabBtns.forEach((item, index) => {
+                    tabBtns[index].className = "";
+                    TabCounts[index].className = "";
+                })
+                btns.className = "active";
+                TabCounts[btnsIndex].className = "active";
+            })
+        })
+    }
+    // 点击左侧
+    LeftTab() {
+        var asideTop = document.querySelectorAll(".asideTop h4");
+        this.Tab(asideTop, asideTop)
+    }
+    RightTab() {
+        var BottomDtrtail = document.querySelectorAll(".BottomDtrtail .tabBtns li");
+        var tabContents = document.querySelectorAll(".BottomDtrtail .tabContents div");
+        this.Tab(BottomDtrtail, tabContents)
+    }
+    // 右侧点击效果
+    rightAsideBind() {
+        var btnsClose = document.querySelector(".btnsClose"); //按钮元素
+        var asideClose = document.querySelector(".asideClose");
+        var flag = false;
+        // asideClose
+        // asideOpen
+        console.log(btnsClose);
+        btnsClose.addEventListener("click", () => {
+            console.log(btnsClose, flag);
+            flag = !flag;
+            if (flag) {
+                btnsClose.className = "btns btnsOpen"
+                asideClose.className = "rightAside asideOpen"
+            }
+            if (!flag) {
+                btnsClose.className = "btns btnsClose"
+                asideClose.className = "rightAside asideClose"
+            }
+        })
+    }
 }
+
+
+var goodData = goodData;
+var Home = new HomeFun();
+
+window.addEventListener("load", () => {
+    Home.AppenNodes();
+    Home.MangifyingGlass();
+    Home.ThumbnaiData();
+    Home.ClickThumbnaiChange();
+    Home.PrevAndNext();
+    Home.RightTopData();
+    Home.clickBind();
+    Home.ChoosePrice();
+    Home.LeftTab();
+    Home.RightTab();
+    Home.rightAsideBind();
+})

@@ -208,7 +208,7 @@
   align-content: space-around;
   justify-content: space-between;
   align-items: center;
-  z-index: -1;
+  overflow: hidden;
 }
 #warpper #content .contMain #center #left #leftBottom #picList ul {
   position: absolute;
@@ -219,6 +219,7 @@
   flex-wrap: nowrap;
   font-size: 0;
   transition: all 0.5s linear;
+  overflow: hidden;
 }
 #warpper #content .contMain #center #left #leftBottom #picList ul li {
   display: inline-block;
@@ -402,4 +403,346 @@
 }
 #warpper #content .contMain #center .right .rightBottom .chooseWarp dl dd:hover {
   color: #cc1122;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart .count {
+  position: relative;
+  float: left;
+  width: 55px;
+  margin-right: 15px;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart .count input {
+  width: 38px;
+  height: 37px;
+  border: 1px solid #ddd;
+  color: #555;
+  text-align: center;
+  text-indent: 5px;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart .count a {
+  position: absolute;
+  right: 1px;
+  width: 15px;
+  height: 19px;
+  box-sizing: border-box;
+  color: #555;
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 18px;
+  border: 1px solid #ddd;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart .count a:first-child {
+  top: 0;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart .count a:last-child {
+  top: 20px;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart button {
+  float: left;
+  height: 36px;
+  font-size: 16px;
+  background-color: #e1251b;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#warpper #content .contMain #center .right .rightBottom .addCart button:hover {
+  background-color: #ea4a36;
+}
+#warpper #content .contMain .goodDetailWarp {
+  width: 1200px;
+  margin: 10px auto 0;
+}
+#warpper #content .contMain .goodDetailWarp::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #content .contMain .goodDetailWarp .leftAside {
+  width: 210px;
+  border: 1px solid #ccc;
+  float: left;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideTop {
+  box-sizing: border-box;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideTop::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideTop h4 {
+  float: left;
+  box-sizing: border-box;
+  width: 105px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+  border-top: 3px solid #fff;
+  border-bottom: 1px solid #ccc;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideTop h4:first-child {
+  border-right: 1px solid #ccc;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideTop .active {
+  border-top: 3px solid #e1251b;
+  width: 105px;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent {
+  padding: 10px;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist1 li {
+  float: left;
+  width: 50%;
+  border-bottom: 1px dashed #ededed;
+  line-height: 28px;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 {
+  margin: 5px 0 15px;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 li {
+  border-bottom: 1px solid #ededed;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 li img {
+  width: 152px;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 li p {
+  font-size: 16px;
+  color: #c81623;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 li .button {
+  width: 152px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 li a {
+  color: #fff;
+  padding: 2px 14px;
+  line-height: 18px;
+  border: 1px solid #8c8c8c;
+  background-color: #cc1122;
+}
+#warpper #content .contMain .goodDetailWarp .leftAside .asideContent div .goodslist2 li a:hover {
+  background-color: #e1251b;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail {
+  width: 980px;
+  float: left;
+  margin-left: 8px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox h4 {
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 5px 0 5px 15px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp {
+  height: 170px;
+  padding-top: 10px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .left {
+  position: relative;
+  width: 127px;
+  height: 165px;
+  float: left;
+  text-align: center;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .left img {
+  width: 87px;
+  margin: 0 auto;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .left p {
+  color: #c81623;
+  font-size: 16px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .left i {
+  position: absolute;
+  top: 48px;
+  right: -25px;
+  font-size: 16px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .middle {
+  width: 668px;
+  height: 165px;
+  float: left;
+  text-align: center;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .middle li {
+  float: left;
+  width: 127px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .middle li img {
+  width: 120px;
+  height: 130px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .right {
+  border-left: 1px solid #ddd;
+  float: left;
+  width: 153px;
+  height: 165px;
+  margin-left: 20px;
+  text-align: center;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .right div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .right p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .right i {
+  color: #b1191a;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .right button {
+  padding: 10px 25px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e1251b;
+  border: none;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .chooseBox .listWarp .right button:hover {
+  background-color: #b1191a;
+  cursor: pointer;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns {
+  background-color: #ededed;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns li {
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-left: none;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 11px;
+  padding-right: 11px;
+  text-align: center;
+  line-height: 40px;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns li.active {
+  background-color: #cc1122;
+  cursor: pointer;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns li.active a {
+  color: #fff;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns li:hover {
+  background: #e12228;
+  cursor: pointer;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns li:hover a {
+  color: #fff;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabBtns li:first-child {
+  border-left: 1px solid #ddd;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabContents div {
+  padding-left: 20px;
+  line-height: 25px;
+  display: none;
+}
+#warpper #content .contMain .goodDetailWarp .rightDetail .BottomDtrtail .tabContents div.active {
+  margin: 10px 0;
+  display: block;
+}
+.rightAside {
+  width: 300px;
+  height: 100%;
+  background: #7a6e6e;
+  transition: all 0.5s linear;
+  position: fixed;
+  top: 0px;
+}
+.rightAside.asideClose {
+  right: -294px;
+}
+.rightAside.asideOpen {
+  right: 0;
+}
+.rightAside .btns {
+  width: 35px;
+  height: 35px;
+  background: #7a6e6e;
+  border-radius: 5px 0 0 5px;
+  left: -29px;
+  background-size: 35px 35px;
+  position: absolute;
+}
+.rightAside .btns.btnsClose {
+  background-image: url('../images/list.png');
+}
+.rightAside .btns.btnsOpen {
+  background-image: url('../images/cross.png');
+}
+.rightAside .content {
+  position: absolute;
+  width: 294px;
+  background-color: bisque;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+}
+.rightAside .navList {
+  position: absolute;
+  left: -29px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rightAside .navList li {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+.rightAside .navList li p {
+  width: 35px;
+  height: 35px;
+  background-color: #7a6e6e;
+  background-image: url(../images/toolbars.png);
+  background-position: -87px -174px;
+}
+.rightAside .navList li i {
+  position: absolute;
+  left: 35px;
+  top: 0;
+  width: 62px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  transition: all 0.5s linear;
+  background-color: #7a6e6e;
+}
+.rightAside .navList li:hover p {
+  background-color: pink;
+}
+.rightAside .navList li:hover i {
+  background-color: pink;
+  left: -62px;
 }
