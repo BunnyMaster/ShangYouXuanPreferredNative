@@ -1,9 +1,11 @@
 import { createStore } from "vuex";
-
+import detail from "./children/detail.js";
 export default createStore({
-  state: {},
+  state: {
+    BannerData: [{}],
+  },
   getters: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: { detail },
 });

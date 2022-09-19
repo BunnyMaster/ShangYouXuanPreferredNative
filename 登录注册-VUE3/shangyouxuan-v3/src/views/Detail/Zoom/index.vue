@@ -11,123 +11,24 @@
         <!-- 左侧放大镜开始 -->
         <div id="left">
           <!-- 上面 -->
-          <div id="leftTop">
-            <!-- 小图框 -->
-            <div id="event"></div>
-            <div id="smallPic">
-              <img src="@/assets/images/s1.png" alt="" />
-            </div>
-            <!-- 蒙版 -->
-            <div id="mask"></div>
-            <!-- 大图框 -->
-            <div id="bigPic">
-              <img src="@/assets/images/s1.png" alt="" />
-            </div>
-          </div>
+          <LeftTop />
           <!-- 下面 -->
-          <div id="leftBottom">
-            <a href="JavaScript:;" class="prev">&slarr; </a>
-            <div id="picList">
-              <ul>
-                <li><img src="@/assets/images/s1.png" /></li>
-                <li><img src="@/assets/images/s2.png" /></li>
-                <li><img src="@/assets/images/s3.png" /></li>
-                <li><img src="@/assets/images/s1.png" /></li>
-                <li><img src="@/assets/images/s2.png" /></li>
-                <li><img src="@/assets/images/s3.png" /></li>
-                <li><img src="@/assets/images/s1.png" /></li>
-                <li><img src="@/assets/images/s2.png" /></li>
-                <li><img src="@/assets/images/s3.png" /></li>
-                <li><img src="@/assets/images/s1.png" /></li>
-                <li><img src="@/assets/images/s2.png" /></li>
-                <li><img src="@/assets/images/s3.png" /></li>
-                <li><img src="@/assets/images/s1.png" /></li>
-                <li><img src="@/assets/images/s2.png" /></li>
-              </ul>
-            </div>
-            <a href="JavaScript:;" class="next">→</a>
-          </div>
+          <LeftBottom />
         </div>
         <!-- 左侧放大镜结束 -->
         <!--右侧商品详情区域开始-->
         <div class="right">
           <!--商品详情数据结构开始-->
-          <div class="rightTop">
-            <h3>
-              Apple iPhone 6s（A1700）64G玫瑰金色 移动通信电信4G手机bbb123
-            </h3>
-            <p>
-              推荐选择下方[移动优惠购],手机套餐齐搞定,不用换号,每月还有花费返
-            </p>
-            <div class="priceWrap">
-              <div class="priceTop">
-                <span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
-                <div class="price">
-                  <span>￥</span>
-                  <p>5299</p>
-                  <i>降价通知</i>
-                </div>
-                <p>
-                  <span>累计评价</span>
-                  <span>670000</span>
-                </p>
-              </div>
-              <div class="priceBottom">
-                <span>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</span>
-                <p>
-                  <span>加价购</span>
-                  <span
-                    >满999.00另加20.00元，或满1999.00另加30.00元，或满2999.00另加40.00元，即可在购物车换购热销商品</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="support">
-              <span>支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持</span>
-              <p>以旧换新，闲置手机回收 4G套餐超值抢 礼品购</p>
-            </div>
-            <div class="address">
-              <span>配&nbsp;送&nbsp;至</span>
-              <p>广东省 深圳市 宝安区</p>
-            </div>
-          </div>
+          <RightTop />
           <!--商品详情数据结构结束-->
           <!--商品参数数据结构开始-->
           <div class="rightBottom">
             <!-- 商品参数的选择区域开始 -->
-            <div class="ShowItem">
-              <ul></ul>
-            </div>
+            <ShowItem />
             <!-- 商品参数的选择区域结束 -->
             <!-- 选择结果之后的数据开始 -->
-            <div class="chooseWarp">
-              <dl>
-                <dt>选择颜色</dt>
-                <dd data="0" class="active">金色</dd>
-                <dd data="40">银色</dd>
-                <dd data="90">黑色</dd>
-              </dl>
-              <dl>
-                <dt>内存容量</dt>
-                <dd data="0" class="active">16G</dd>
-                <dd data="300">64G</dd>
-                <dd data="900">128G</dd>
-                <dd data="1300">256G</dd>
-              </dl>
-              <dl>
-                <dt>选择版本</dt>
-                <dd data="0" class="active">公开版</dd>
-                <dd data="-1000">移动版</dd>
-              </dl>
-              <dl>
-                <dt>购买方式</dt>
-                <dd data="0" class="active">官方标配</dd>
-                <dd data="-240">优惠移动版</dd>
-                <dd data="-390">电信优惠版</dd>
-              </dl>
-            </div>
+            <ChooseWarp />
             <!-- 选择结果之后的数据结束 -->
-
             <!-- 加入购物车以及数据区域开始 -->
             <div class="addCart">
               <div class="count">
@@ -305,7 +206,14 @@
   <!-- 右侧侧边栏结束 -->
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PicList from "@/views/Detail/Zoom/children/picList.vue";
+import LeftTop from "@/views/Detail/Zoom/children/LeftTop.vue";
+import LeftBottom from "@/views/Detail/Zoom/children/leftBottom.vue";
+import RightTop from "@/views/Detail/Zoom/children/RightTop.vue";
+import ShowItem from "@/views/Detail/Zoom/children/ShowItem.vue";
+import ChooseWarp from "@/views/Detail/Zoom/children/ChooseWarp.vue";
+</script>
 
 <style lang="less">
 // 内容区域开始

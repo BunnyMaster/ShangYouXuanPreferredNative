@@ -46,7 +46,14 @@
   <!-- 头部结束 -->
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
+onMounted(() => {
+  store.dispatch("GetAll");
+});
+</script>
 
 <style lang="less">
 // 头部开始
