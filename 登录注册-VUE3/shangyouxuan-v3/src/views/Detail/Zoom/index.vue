@@ -4,7 +4,7 @@
     <!-- 版心元素 -->
     <div class="contMain">
       <!-- 路径导航 -->
-      <div id="navPath"></div>
+      <div id="navPath"><NavPath /></div>
       <!-- 路径导航结束 -->
       <!-- 放大镜效果开始 -->
       <div id="center">
@@ -32,9 +32,21 @@
             <!-- 加入购物车以及数据区域开始 -->
             <div class="addCart">
               <div class="count">
-                <input type="text" />
-                <a href="JavaScript:;">+</a>
-                <a href="JavaScript:;">-</a>
+                <input
+                  type="text"
+                  v-model="ZoomData.addCartNum"
+                  @input="ZoomFun.InputNum(ZoomData.addCartNum)"
+                />
+                <a href="JavaScript:;" @click="ZoomData.addCartNum++">+</a>
+                <a
+                  href="JavaScript:;"
+                  @click="
+                    ZoomData.addCartNum <= 1
+                      ? (ZoomData.addCartNum = 1)
+                      : ZoomData.addCartNum--
+                  "
+                  >-</a
+                >
               </div>
               <button>加入购物车</button>
             </div>
@@ -53,149 +65,17 @@
             <h4>推荐品牌</h4>
           </div>
           <!-- 下边 -->
-          <div class="asideContent">
-            <div class="active">
-              <ul class="goodslist1">
-                <li>手机</li>
-                <li>手机壳</li>
-                <li>内存卡</li>
-                <li>iphone配件</li>
-                <li>贴膜</li>
-                <li>手机耳机</li>
-                <li>移动电源</li>
-                <li>平板电脑</li>
-              </ul>
-              <ul class="goodslist2">
-                <li>
-                  <img src="@/assets/images/part01.png" alt="" />
-                  <span>Apple苹果iPhone 6s (A1699)</span>
-                  <p>¥6088.00</p>
-                  <div class="button">
-                    <a href="javascript:;">加入购物车</a>
-                  </div>
-                </li>
-                <li>
-                  <img src="@/assets/images/part01.png" alt="" />
-                  <span>Apple苹果iPhone 6s (A1699)</span>
-                  <p>¥6088.00</p>
-                  <div class="button">
-                    <a href="javascript:;">加入购物车</a>
-                  </div>
-                </li>
-                <li>
-                  <img src="@/assets/images/part01.png" alt="" />
-                  <span>Apple苹果iPhone 6s (A1699)</span>
-                  <p>¥6088.00</p>
-                  <div class="button">
-                    <a href="javascript:;">加入购物车</a>
-                  </div>
-                </li>
-                <li>
-                  <img src="@/assets/images/part01.png" alt="" />
-                  <span>Apple苹果iPhone 6s (A1699)</span>
-                  <p>¥6088.00</p>
-                  <div class="button">
-                    <a href="javascript:;">加入购物车</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div></div>
-          </div>
+          <AsideContent />
         </aside>
         <div class="rightDetail">
           <!-- 选择搭配开始 -->
-          <div class="chooseBox">
-            <h4>选择搭配</h4>
-            <div class="listWarp">
-              <div class="left">
-                <img src="@/assets/images/l-m01.png" alt="" />
-                <p>￥5299</p>
-                <i>+</i>
-              </div>
-              <!-- 中间 -->
-              <ul class="middle">
-                <li>
-                  <img src="@/assets/images/dp01.png" alt="" />
-                  <span>Feless费雷思VR</span>
-                  <div>
-                    <input type="checkbox" />
-                    <span>50</span>
-                  </div>
-                </li>
-                <li>
-                  <img src="@/assets/images/dp01.png" alt="" />
-                  <span>Feless费雷思VR</span>
-                  <div>
-                    <input type="checkbox" />
-                    <span>50</span>
-                  </div>
-                </li>
-                <li>
-                  <img src="@/assets/images/dp01.png" alt="" />
-                  <span>Feless费雷思VR</span>
-                  <div>
-                    <input type="checkbox" />
-                    <span>50</span>
-                  </div>
-                </li>
-                <li>
-                  <img src="@/assets/images/dp01.png" alt="" />
-                  <span>Feless费雷思VR</span>
-                  <div>
-                    <input type="checkbox" />
-                    <span>50</span>
-                  </div>
-                </li>
-              </ul>
-              <div class="right">
-                <div>已购0件商品</div>
-                <p>套餐价</p>
-                <i>￥5299</i>
-                <div>
-                  <button>加入购物车</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ChooseBox />
+
           <!-- 选择搭配结束 -->
           <!-- 选项卡开始 -->
           <div class="BottomDtrtail">
             <!-- 菜单 -->
-            <ul class="tabBtns">
-              <li class="active"><a href="javascript:;">商品介绍</a></li>
-              <li><a href="javascript:;">规格包装</a></li>
-              <li><a href="javascript:;">售后与保障</a></li>
-              <li><a href="javascript:;">商品评价</a></li>
-              <li><a href="javascript:;">手机社区</a></li>
-            </ul>
-            <div class="tabContents">
-              <div class="active">
-                <ul>
-                  <li>分辨率：1920*1080(FHD)</li>
-                  <li>后置摄像头：1200万像素</li>
-                  <li>前置摄像头：500万像素</li>
-                  <li>核 数：其他</li>
-                  <li>频 率：以官网信息为准</li>
-                  <li>品牌： Apple</li>
-                  <li>商品名称：APPLEiPhone 6s Plus</li>
-                  <li>商品编号：1861098</li>
-                  <li>商品产地：中国大陆</li>
-                  <li>商品毛重：0.51kg</li>
-                  <li>热点：指纹识别，Apple Pay，金属机身，拍照神器</li>
-                  <li>系统：苹果（IOS）</li>
-                  <li>像素：1000-1600万品毛重：0.51kg</li>
-                  <li>机身内存：64GB</li>
-                </ul>
-                <img src="@/assets/images/intro01.png" alt="" />
-                <img src="@/assets/images/intro02.png" alt="" />
-                <img src="@/assets/images/intro03.png" alt="" />
-              </div>
-              <div>规格包装</div>
-              <div>售后与保障</div>
-              <div>商品评价</div>
-              <div>手机社区</div>
-            </div>
+            <BottomDtrtail />
           </div>
           <!-- 选项卡结束 -->
         </div>
@@ -207,12 +87,41 @@
 </template>
 
 <script setup lang="ts">
-import PicList from "@/views/Detail/Zoom/children/picList.vue";
 import LeftTop from "@/views/Detail/Zoom/children/LeftTop.vue";
 import LeftBottom from "@/views/Detail/Zoom/children/leftBottom.vue";
 import RightTop from "@/views/Detail/Zoom/children/RightTop.vue";
 import ShowItem from "@/views/Detail/Zoom/children/ShowItem.vue";
 import ChooseWarp from "@/views/Detail/Zoom/children/ChooseWarp.vue";
+import AsideContent from "@/views/Detail/Zoom/children/AsideContent.vue";
+import ChooseBox from "@/views/Detail/Zoom/children/ChooseBox.vue";
+import BottomDtrtail from "@/views/Detail/Zoom/children/BottomDtrtail.vue";
+import { reactive } from "vue";
+import { ElMessage } from "element-plus";
+import NavPath from "@/views/Detail/Zoom/children/NavPath.vue";
+const ZoomData = reactive({
+  addCartNum: 1,
+  addCartNumSave: 1,
+  addCartNumTimer: 3,
+});
+const ZoomFun = reactive({
+  //加入购物车输入检测
+  InputNum(addCartValue: any) {
+    const inputNum = /^\d{1,6}$/;
+    if (inputNum.test(addCartValue)) {
+      ZoomData.addCartNum = addCartValue;
+      ZoomData.addCartNumSave = addCartValue;
+    } else {
+      ElMessage.closeAll();
+      ZoomData.addCartNum = ZoomData.addCartNumSave;
+      ElMessage({
+        showClose: true,
+        message: "输入不合法",
+        type: "warning",
+        center: true,
+      });
+    }
+  },
+});
 </script>
 
 <style lang="less">

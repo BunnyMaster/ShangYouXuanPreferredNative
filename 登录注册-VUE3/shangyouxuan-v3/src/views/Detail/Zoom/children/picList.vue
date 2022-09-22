@@ -1,24 +1,21 @@
 <template>
   <div id="picList">
     <ul>
-      <li><img src="@/assets/images/s1.png" /></li>
-      <li><img src="@/assets/images/s2.png" /></li>
-      <li><img src="@/assets/images/s3.png" /></li>
-      <li><img src="@/assets/images/s1.png" /></li>
-      <li><img src="@/assets/images/s2.png" /></li>
-      <li><img src="@/assets/images/s3.png" /></li>
-      <li><img src="@/assets/images/s1.png" /></li>
-      <li><img src="@/assets/images/s2.png" /></li>
-      <li><img src="@/assets/images/s3.png" /></li>
-      <li><img src="@/assets/images/s1.png" /></li>
-      <li><img src="@/assets/images/s2.png" /></li>
-      <li><img src="@/assets/images/s3.png" /></li>
-      <li><img src="@/assets/images/s1.png" /></li>
-      <li><img src="@/assets/images/s2.png" /></li>
+      <li
+        v-for="(picList, picListIndex) in picListData.picList"
+        :key="picListIndex"
+      >
+        <img :src="picList.s" />
+      </li>
     </ul>
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped></style>
+<script setup lang="ts">
+import { computed, reactive } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
+const picListData = reactive({
+  picList: computed(() => store.state.detail.ImagessrcList),
+});
+</script>

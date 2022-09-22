@@ -1,36 +1,26 @@
 <template>
   <div class="chooseWarp">
-    <dl>
-      <dt>选择颜色</dt>
-      <dd data="0" class="active">金色</dd>
-      <dd data="40">银色</dd>
-      <dd data="90">黑色</dd>
-    </dl>
-    <dl>
-      <dt>内存容量</dt>
-      <dd data="0" class="active">16G</dd>
-      <dd data="300">64G</dd>
-      <dd data="900">128G</dd>
-      <dd data="1300">256G</dd>
-    </dl>
-    <dl>
-      <dt>选择版本</dt>
-      <dd data="0" class="active">公开版</dd>
-      <dd data="-1000">移动版</dd>
-    </dl>
-    <dl>
-      <dt>购买方式</dt>
-      <dd data="0" class="active">官方标配</dd>
-      <dd data="-240">优惠移动版</dd>
-      <dd data="-390">电信优惠版</dd>
+    <dl
+      v-for="(crumb, crumbIndex) in ChooseWarpData.GoodsDetailList"
+      :key="crumbIndex"
+    >
+      <dt>{{ crumb.title }}</dt>
+      <dd data="0" class="active" v-for="data in crumb.data">
+        {{ data.type }}
+      </dd>
     </dl>
   </div>
 </template>
 
-<script>
-export default {
-  name: "ChooseWarp",
-};
+<script setup lang="ts">
+import { useStore } from "vuex";
+import { computed, reactive } from "vue";
+
+const store = useStore();
+const ChooseWarpData = reactive({
+  GoodsDetailList: computed(() => store.state.detail.GoodsDetailList.crumbData),
+});
+const ChooseWarpFun = reactive({});
 </script>
 
 <style scoped></style>

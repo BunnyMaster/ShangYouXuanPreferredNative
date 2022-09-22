@@ -1,48 +1,36 @@
 <template>
   <!-- 右侧侧边栏结束 -->
-  <div class="rightAside asideClose">
+  <div
+    class="rightAside"
+    :class="RightAsideData.flag ? 'asideOpen' : 'asideClose'"
+  >
     <!-- 按钮区域 -->
-    <div class="btns btnsClose"></div>
+    <div
+      class="btns"
+      :class="RightAsideData.flag ? 'btnsOpen' : 'btnsClose'"
+      @click="RightAsideFun.btnsCloseOrOpen"
+    ></div>
     <!-- 侧边栏区域 -->
     <div class="content"></div>
     <!-- 侧边导航栏 -->
-    <ul class="navList">
-      <li>
-        <!-- 小图标 -->
-        <p></p>
-        <i>尚选会会员</i>
-      </li>
-      <li>
-        <!-- 小图标 -->
-        <p></p>
-        <i>尚选会会员</i>
-      </li>
-      <li>
-        <!-- 小图标 -->
-        <p></p>
-        <i>尚选会会员</i>
-      </li>
-      <li>
-        <!-- 小图标 -->
-        <p></p>
-        <i>尚选会会员</i>
-      </li>
-      <li>
-        <!-- 小图标 -->
-        <p></p>
-        <i>尚选会会员</i>
-      </li>
-      <li>
-        <!-- 小图标 -->
-        <p></p>
-        <i>尚选会会员</i>
-      </li>
-    </ul>
+    <NavList />
   </div>
   <!-- 右侧侧边栏结束 -->
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { reactive } from "vue";
+import NavList from "@/views/Detail/RrightAside/children/NavList.vue";
+const RightAsideData = reactive({
+  flag: false,
+  btnsCloseOrOpen: "btnsClose",
+});
+const RightAsideFun = reactive({
+  btnsCloseOrOpen() {
+    RightAsideData.flag = !RightAsideData.flag;
+  },
+});
+</script>
 
 <style lang="less">
 // 右侧侧边栏开始
@@ -52,7 +40,7 @@
   background: #7a6e6e;
   transition: all 0.5s linear;
   position: fixed;
-  top: 0px;
+  top: 0;
 
   &.asideClose {
     right: -294px;
