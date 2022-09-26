@@ -20,7 +20,6 @@ let detail = {
       result["code"] === 200
         ? commit("GETPATH", result.data)
         : Promise.reject(new Error(`错误总数据获取失败`));
-      console.log(result);
     },
   },
 };

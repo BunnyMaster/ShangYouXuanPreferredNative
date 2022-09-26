@@ -41,9 +41,21 @@
 <script setup lang="ts">
 import { computed, reactive } from "vue";
 import { useStore } from "vuex";
+import emitter from "@/utils/mitt";
+
 const store = useStore();
 const RightTopData = reactive({
   RightTop: computed(() => store.state.detail.GoodsDetailList) || [{}],
+  changePrice: 0,
+});
+emitter.on("ChangePrice", res => {
+  let changePrice = res.data[res.index].changePrice;
+  let price = RightTopData.RightTop.price;
+  if (changePrice !== RightTopData.changePrice) {
+    RightTopData.RightTop.price =
+      price + changePrice - RightTopData.changePrice;
+    RightTopData.changePrice = changePrice;
+  }
 });
 </script>
 

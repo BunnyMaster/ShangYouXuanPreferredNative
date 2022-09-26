@@ -156,61 +156,6 @@ const ZoomFun = reactive({
         width: 400px;
         float: left;
 
-        // 左侧上面
-        #leftTop {
-          position: relative;
-
-          // 小图
-          #smallPic {
-            width: 400px;
-            height: 400px;
-            border: 1px solid #fdfdfd;
-
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          #event {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            // background-color: #e1251b;
-            z-index: 998;
-          }
-
-          #mask {
-            width: 200px;
-            height: 200px;
-            background-color: rgba(0, 255, 0, 0.3);
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: none;
-          }
-
-          // 大图
-          #bigPic {
-            width: 400px;
-            height: 400px;
-            border: 1px solid #ddd;
-            left: 420px;
-            top: 0;
-            position: absolute;
-            overflow: hidden;
-            display: none;
-
-            img {
-              position: absolute;
-              width: 800px;
-              height: 800px;
-            }
-          }
-        }
-
         // 左侧下面
         #leftBottom {
           width: 400px;
@@ -228,45 +173,6 @@ const ZoomFun = reactive({
             text-align: center;
             line-height: 54px;
             z-index: 999;
-          }
-
-          #picList {
-            position: relative;
-            width: 372px;
-            height: 56px;
-            float: left;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-content: space-around;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
-
-            ul {
-              position: absolute;
-              left: 0;
-              top: 0;
-              flex: 1;
-              display: flex;
-              flex-wrap: nowrap;
-              font-size: 0;
-              transition: all 0.5s linear;
-              overflow: hidden;
-
-              li {
-                display: inline-block;
-                width: 50px;
-                height: 50px;
-                border: 1px solid #ccc;
-                margin: 0 20px;
-
-                img {
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-            }
           }
         }
       }
