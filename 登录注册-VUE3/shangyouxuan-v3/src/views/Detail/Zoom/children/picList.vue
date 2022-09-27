@@ -42,6 +42,18 @@ watch(
 );
 </script>
 <style lang="less">
+.swiper {
+  padding: 0 30px 0 50px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  width: 12px;
+  height: 50px;
+  background-color: #83838356;
+  line-height: 50px;
+  text-align: center;
+  font-size: 12px;
+}
 .current {
   box-sizing: border-box;
   border: 1px solid #b1191a;
